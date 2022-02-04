@@ -289,8 +289,6 @@ export abstract class CodeBlockBlueprint extends Blueprint {
         return renderChild
     }
 
-
-
     public includeImages(element: HTMLElement) {
         element.findAll(".internal-embed").forEach(el => {
             const src = el.getAttribute("src");

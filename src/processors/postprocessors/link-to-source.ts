@@ -22,7 +22,7 @@ export class LinkToSourcePostprocessor extends Postprocessor {
 
         const link = markdownLinkToTextAndHref(
             this.app.vault,
-            `[[${note.source.file.name}|Source]]`,
+            `[[${note.source.file.name}]]`,
         )
 
         const anchor = createEl('a')
@@ -33,6 +33,7 @@ export class LinkToSourcePostprocessor extends Postprocessor {
         linkParagraph.textContent = '🔗 '
         linkParagraph.appendChild(anchor)
 
-        domField.content.append(createEl('br'), linkParagraph)
+        domField.content.prepend(createEl('br'), linkParagraph)
+
     }
 }
