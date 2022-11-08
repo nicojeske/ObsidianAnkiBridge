@@ -33,6 +33,5 @@ export class LinkToSourcePostprocessor extends Postprocessor {
         linkParagraph.textContent = '🔗 '
         linkParagraph.appendChild(anchor)
 
-        domField.content.append(createEl('br'), linkParagraph)
     }
 }
